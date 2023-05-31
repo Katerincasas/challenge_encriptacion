@@ -1,0 +1,228 @@
+body{
+    background-color:  #E9ECF8;
+}
+
+.contenedor-padre{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 1rem auto;
+    gap: 4rem;
+    border-radius: 50%;
+    position: relative;
+    min-width: 350px;
+    max-width: 1200px;
+}
+
+.logo{
+    margin: 1.563rem;
+}
+
+.contenedor-salida-datos{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    background-color: white;
+    width: 95%;
+    height: 41.25rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    margin: auto;
+    margin-right: 1rem;
+    gap: .5rem;
+    position: relative;
+
+}
+
+.copiar{
+    position: absolute;
+    top: 35.75rem;
+    left: .7rem;
+}
+
+p{
+    text-align: center;
+    margin-top: 3.125rem;
+    font-size: 1.25rem;
+    color: #282f36;
+    padding: .625rem;
+    overflow-wrap: break-word;
+}
+
+.form-boton{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: .5rem;
+    position: absolute;
+    top: 36.875rem;
+    left: 1rem;
+}
+
+input:nth-of-type(2):hover, .copiar:hover{
+    background-color: #0A3871;
+    color: white;
+}
+
+input:nth-of-type(2):active,.copiar:active{
+    background-color: #0a3871c5;
+    color: white;
+}
+
+
+.encriptar,.boton{
+    background-color: transparent;
+    border: 1px solid #0A3871;
+    border-radius: 18px;
+    width: 95%;
+    height: 3.5rem;
+    color: rgb(28, 80, 158);
+    font-size: 18px;
+}
+
+.encriptar{
+    background-color: #0A3871;
+    color: white;
+    border: none;
+}
+
+.encriptar:active{
+    background-color: #0a3871be;
+    
+}
+
+#muneco{
+    padding: 2rem 0 0 1rem;
+    transition: opacity 1s;
+}
+
+
+.entrada-de-datos{
+    display: flex;
+    position: absolute;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #0A3871;
+    top: 7.5rem;
+    left: 2rem;
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 26rem;
+    background-color: #E9ECF8;
+    resize: none;
+}
+.contenedor-entrada-datos{
+    position: relative;
+    width: 100%;
+}
+.label{
+    display: flex;
+    gap: 5px;
+    width: 21.875rem;
+    height: 2rem;
+    position: absolute;
+    top: 35.313rem;
+    left: 5rem;
+}
+
+.condicion{
+    padding: 0;
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.salida{
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #151515dc;
+    margin: 20px 0 0 5px;
+    outline: none;
+    border: none;
+    width: 95%;
+    height: 100%;
+    resize: none;
+    text-align: center;
+}
+
+@media (max-width:920px){
+    .contenedor-padre{
+        width: 100%;
+        height: 100%;
+        border: none;
+        grid-template-columns: 1fr;
+    }
+    .contenedor-entrada-datos{
+        width: 100%;
+    }
+    #muneco{
+        display: none !important;
+    }
+    .form-boton{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 1rem;
+        position: absolute;
+        width: 98%;
+        height: 158px;
+        left: 1rem;
+        top: 447px;
+        max-width: 920px;
+    }
+
+    .entrada-de-datos{
+        position: absolute;
+        width:90%;
+        height: 248px;
+        left: 16px;
+        top: 152px;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0A3871;
+    }
+    .label{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        gap: 8px;
+        position: absolute;
+        width: 259px;
+        height: 22px;
+        left: 16px;
+        top: 418px;
+    }
+    .contenedor-salida-datos{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 32px;
+        gap: 12px;
+        position: absolute;
+        width: 98%;
+        height: 196px;
+        left: .6rem;
+        top: 590px;
+        background: #FFFFFF;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+        max-width: 920px;
+    }
+    .salida{
+        margin:5px auto auto auto;
+        padding: 0;
+        width: 98%;
+        height: 75%;
+    }
+    .copiar{
+        left: .5rem;
+        top: 8rem;
+        padding: 0;
+        margin: auto auto 0 auto;
+    }
+    .boton{
+        width: 98%;
+    }
+}
